@@ -77,7 +77,7 @@ if ($slug_url_grupo_prod_id != "") {
 				);
 				$pods_producto = pods($name_pod_producto, $params_producto);
 				if (0 < $pods_producto->total()) {
-					echo '<div class="w_100 section_top_justify productos">';
+					echo '<div class="w_100 section_top_center productos">';
 					$variante = 2;
 					while ($pods_producto->fetch()) {
 						$post_id_producto = $pods_producto->display('id');
