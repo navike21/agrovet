@@ -1,0 +1,1167 @@
+@import _variables
+@import _fonts
+
+//		Títulos: $fuente_principal
+//		Contenido: $fuente_secundaria
+
+body
+	font-size: 1.6rem
+	font-family: $fuente_secundaria
+
+strong
+	font-family: $fuente_principal
+
+header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 99999
+	transition: all ease-in-out .3s
+	nav
+		position: relative
+		z-index: 2
+		transition: all ease-in-out .3s
+		.logo
+			background: $blanco
+			padding: 50px 10px
+			transition: all ease-in-out .3s
+			img
+				transition: all ease-in-out .3s
+
+		ul
+			li
+				transition: all ease-in-out .3s
+				margin: 10px
+				position: relative
+				text-transform: uppercase
+				a
+					position: relative
+					color: $blanco
+					padding: 10px 5px
+					font-size: 1.3rem
+					letter-spacing: 1px
+				a::after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0
+					right: 0
+					margin: auto
+					width: 0%
+					height: 2px
+					background: $verde_limon
+					transition: all ease-in-out .3s
+				a:hover
+					color: $verde_limon
+				// a:hover::after
+				// 	width: 70%
+				// 	transition: all ease-in-out .3s
+				ul
+					height: 0
+					position: absolute
+					top: 20px
+					width: 150px
+					left: 0
+					right: 0
+					margin: auto
+					transition: all ease-in-out .3s
+					overflow: hidden
+					opacity: 0
+					li
+						background: $blanco
+						border-radius: 3px
+						margin: 4px 0
+						display: block
+						width: 100%
+						transition: all ease-in-out .3s
+						a
+							color: $verde_esmeralda_oscuro
+							display: block
+							font-size: 1.1rem
+							margin: auto
+							position: relative
+							text-transform: uppercase
+							width: 80%
+							padding: 5px
+					li:hover
+						background: $verde_lima
+						transition: all ease-in-out .3s
+						a
+							color: $blanco
+						a:hover::after
+							width: 0%
+			li:hover
+				transition: all ease-in-out .3s
+				ul
+					opacity: 1
+					height: inherit
+					transition: all ease-in-out .3s
+					top: 26px
+			.current_page_item
+				a::after
+					width: 70%
+					transition: all ease-in-out .3s
+header::after
+	content: ''
+	background: $verde_oscuro
+	position: absolute
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	width: 100%
+	height: 110px
+	z-index: 1
+	margin: auto
+	background-blend-mode: multiply
+	opacity: .8
+	transition: all ease-in-out .4s
+
+.header_slide
+	nav
+		height: 110px
+		.logo
+			background: none
+			padding: 0px 10px
+.header_slide::after
+	opacity: 1
+
+// FIN HEADER
+
+// .slide1
+// 	background: url("../images/slide-1.png") no-repeat center center
+// 	background-size: cover
+// 	height: 80vh
+// 	.caption
+// 		color: rgba($blanco, .8)
+// 		font-size: 6rem
+// 		line-height: 1
+// 		margin-right: 10%
+
+#slider_home
+	h2
+		font-size: 4rem!important
+
+.banner
+	height: 350px
+	overflow: hidden
+
+h2
+	color: $gris
+	font-size: 2.6rem
+	padding: 30px 0
+	letter-spacing: 4px
+	text-transform: uppercase
+
+//Productos
+.triangle
+	position: relative
+	background: #ffffff
+	border-radius: .4em
+
+.triangle::after
+	content: ''
+	position: absolute
+	top: 0
+	left: 50%
+	width: 0
+	height: 0
+	border: 100px solid transparent
+	border-bottom-color: #ffffff
+	border-top: 0
+	margin-left: -100px
+	margin-top: -65px
+
+	-webkit-transform-style: flat
+	-webkit-transform: rotateX(60deg) rotateY(0) rotateZ(0)
+	transform-style: flat
+	transform: rotateX(60deg) rotateY(0) rotateZ(0)
+	z-index: 50
+
+.productos
+	figure
+		overflow-x: hidden
+		height: 57vh
+		min-height: 360px
+		position: relative
+		margin: 25px 0 45px
+		figcaption
+			color: $blanco
+			padding: 25px 0
+			letter-spacing: 2px
+			left: 0
+			right: 0
+			position: absolute
+			width: 100%
+		.abajo
+			bottom: 0
+		.arriba
+			top: 0
+
+		.abajo,
+		.arriba
+			ul
+				position: absolute
+				width: 100%
+				left: 0
+				right: 0
+				opacity: 0
+				transition: all ease-in-out .4s
+			li
+				font-size: 1.2rem
+				margin: 7px 0
+				padding: 10px 0
+				a
+					text-align: center
+					color: $verde_oscuro
+		.abajo
+			ul
+				bottom: 75px
+		.arriba
+			ul
+				top: 75px
+		img
+			opacity: 0
+
+	figure:first-child
+		figcaption
+			background: $verde_lima
+			ul
+				li
+					background-color: rgba($verde_lima, .7)
+	figure:nth-child(2)
+		figcaption
+			background: $verde_esmeralda
+			ul
+				li
+					background-color: rgba($verde_esmeralda, .7)
+	figure:nth-child(3)
+		figcaption
+			background: $verde_lima_oscuro
+			ul
+				li
+					background-color: rgba($verde_lima_oscuro, .7)
+	figure:nth-child(4)
+		figcaption
+			background: $verde_esmeralda_oscuro
+			ul
+				li
+					background-color: rgba($verde_esmeralda_oscuro, .7)
+	figure:hover
+		ul
+			opacity: 1
+			transition: all ease-in-out .4s
+//Fin Productos
+
+//Servicios
+.servicios
+	background: $verde_oscuro
+	padding: 20px 0 70px
+	h2
+		color: $blanco
+	a
+		color: $blanco
+		letter-spacing: 2px
+		font-size: 1.4rem
+		margin: 10px 0
+		text-transform: uppercase
+		img
+			margin-bottom: 15px
+			transition: all ease-in-out .4s
+	a:hover
+		img
+			opacity: .8
+//Fin Servicios
+//bxSlider
+.bx-wrapper
+	box-shadow: none
+//Fin BxSlider
+//Plantas
+.plantas
+	p
+		margin-bottom: 40px
+		letter-spacing: 2px
+#plantas
+	strong
+		display: block
+		font-size: 2.5rem
+		text-transform: uppercase
+		color: $gris
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-family: $fuente_secundaria
+#wrapp_plantas
+	.bx-wrapper
+		.bx-next
+			background: url("../images/right.png") center center
+			background-size: 100%
+			right: 39%
+			bottom: 1%
+			top: inherit
+		.bx-prev
+			background: url("../images/left.png") center center
+			background-size: 100%
+			left: 53.5%
+			bottom: 1%
+			top: inherit
+//Fin Plantas
+//Novedades
+.novedades,
+.novedades_more
+	background: $verde_bebe
+	h2
+		color: $blanco
+	p
+		color: $blanco
+		margin-bottom: 40px
+		letter-spacing: 2px
+	a
+		margin: 0 5px 40px
+		figure
+			height: 270px
+			overflow: hidden
+			position: relative
+			transition: all ease-in-out .3s
+			figcaption
+				background: rgba($verde_oscuro,.8)
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				padding: 30px 20px
+				transition: all ease-in-out .3s
+				height: 80px
+				h3
+					color: $blanco
+					font-size: 1.4rem
+					text-transform: uppercase
+					margin-bottom: 5px
+					letter-spacing: 2px
+				p
+					margin: 0
+					font-size: 1.05rem
+					letter-spacing: 1px
+	a:hover
+		figure
+			transition: all ease-in-out .3s
+			figcaption
+				height: 100%
+				transition: all ease-in-out .3s
+				padding: 0 20px
+//Fin Novedades
+//FOOTER
+footer
+	background: url("../images/fondo-footer.png") no-repeat center center
+	background-size: cover
+	padding: 30px 0
+	color: $blanco
+	font-size: 1.2rem
+	letter-spacing: 1px
+	a
+		color: $blanco
+	section
+		background: rgba($verde_oscuro, .7)
+		padding: 30px 0
+		h3
+			color: $blanco
+			letter-spacing: 4px
+			font-size: 1.8rem
+			margin-bottom: 10px
+			text-transform: uppercase
+	img
+		width: 70%
+
+.derechos
+	background: $blanco
+	color: $negro
+	padding: 20px 0
+//FIN FOOTER
+//About
+.about
+	h2
+		color: $verde_esmeralda
+		text-align: center
+		width: 100%
+		font-size: 2.8rem
+	p
+		color: $gris
+		width: 80%
+		text-align: center
+		letter-spacing: 1px
+		margin: 0 0 20px
+	h3
+		font-size: 2rem
+		color: $verde_limon
+		text-align: center
+		width: 100%
+		text-transform: uppercase
+		letter-spacing: 2px
+		margin: 15px 0
+	.pilares
+		border-top: 4px solid $verde_limon
+		border-bottom: 9px solid $verde_limon
+		padding-bottom: 25px
+		.lista_pilares
+			color: $gris
+			li
+				margin: 5px 20px
+				width: 8%
+				min-width: 70px
+				img
+					width: 100%
+					height: auto
+		.valores
+			li
+				position: relative
+				padding: 5px 25px
+				color: $gris
+			li::before
+				background: $verde_limon
+				content: ""
+				width: 12px
+				height: 12px
+				border-radius: 50%
+				position: absolute
+				margin: auto
+				top: 0
+				bottom: 0
+				left: 0
+.calidad
+	background: url("../images/campesino.png") no-repeat center center
+	background-size: cover
+	padding: 40px 0 60px
+	h2
+		color: $blanco
+	img
+		max-width: 250px
+		display: block
+		margin: 20px auto
+		height: auto
+	p
+		width: 70%
+		text-align: center
+		color: $blanco
+	ul
+		width: 100%
+		li
+			text-align: center
+			color: $blanco
+			position: relative
+			padding-left: 30px
+		li::before
+			content: ""
+			background: $verde_limon
+			position: absolute
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			top: 0
+			bottom: 0
+			margin: auto
+			transform: translateX(-20px)
+.certificacion
+	h2
+		color: $verde_esmeralda
+		margin-bottom: 0
+		width: 100%
+		text-align: center
+	p
+		color: $gris
+		width: 80%
+		text-align: center
+		margin: 0 0 30px
+		img
+			display: block
+			margin: 10px auto 0
+
+#historia_wrapp
+	position: relative
+	background: url("../images/historia.png") center center no-repeat
+	background-size: cover
+	h2
+		color: $blanco
+		position: relative
+		z-index: 2
+		margin: 15px auto
+		letter-spacing: 5px
+		font-size: 3rem
+	.wrapp_history
+		position: relative
+		z-index: 3
+
+		.slider
+			width: 100%
+			margin: 10px auto
+
+		.slider-nav
+			position: relative
+			a
+				cursor: pointer
+				background: $blanco
+				width: 70px
+				height: 70px
+				color: $verde_limon
+				border-radius: 50%
+				margin: auto
+				letter-spacing: 1px
+				position: relative
+			a:hover
+				background: $verde_bebe
+				color: $blanco
+			a::before
+				content: ""
+				width: 60px
+				height: 60px
+				border: 2px solid $verde_limon
+				border-radius: 50%
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				margin: auto
+				opacity: .65
+			a:hover::before
+				border-color: $blanco
+		.slider-nav::before
+			content: ""
+			height: 3px
+			background: $blanco
+			position: absolute
+			top: 0
+			bottom: 0
+			margin: auto
+			width: 100%
+			opacity: .3
+		.slick-current
+			a, a:hover
+				background: $verde_esmeralda_oscuro
+				color: $blanco
+			a::before, a:hover::before
+				border: 2px solid $blanco
+		.slick-prev:before,
+		.slick-next:before
+			color: black
+
+		.slick-slide
+			transition: all ease-in-out .3s
+			opacity: .85
+		.slick-active
+			opacity: 1
+		.slick-current
+			opacity: 1
+		.slick-prev
+			background: url("../images/prev_historia.png") center center no-repeat
+			background-size: 100%
+		.slick-prev::before
+			content: ""
+		.slick-next
+			background: url("../images/next_historia.png") center center no-repeat
+			background-size: 100%
+		.slick-next::before
+			content: ""
+
+		.slider-for
+			div
+				padding: 15px 0
+				p
+					color: $blanco
+
+.team
+	padding: 10px 0 40px
+	h2
+		width: 100%
+		text-align: center
+		color: $verde_esmeralda
+	.texto_team
+		margin-left: 3%
+		p
+			margin: 5px 0
+			text-align: justify
+			margin: 15px 0
+
+//Fin About
+.bx-wrapper
+	img
+		max-width: 100%
+		width: 100%
+		height: auto
+//servicios
+.servicios_wrapp
+	background: $blanco
+	h2
+		color: $verde_esmeralda_oscuro
+		font-size: 3rem
+	article
+		margin: 15px 0
+		section
+			height: 400px
+			overflow: hidden
+			img
+				// transform: scale(1.1)
+				opacity: 0
+				width: 1px
+				height: 1px
+			div
+				position: relative
+				h3
+					text-transform: uppercase
+					color: $blanco
+					font-size: 2rem
+					letter-spacing: 2px
+				p
+					color: $blanco
+					letter-spacing: 1px
+	article:nth-child(2)
+		background: $verde_esmeralda_oscuro
+		section
+			div::before
+				content: ""
+				height: 100%
+				width: 2px
+				background: $blanco
+				position: absolute
+				right: -20px
+	article:nth-child(3)
+		background: $verde_limon
+		section
+			div::before
+				content: ""
+				height: 100%
+				width: 2px
+				background: $blanco
+				position: absolute
+				left: -20px
+	article:nth-child(4)
+		background: $verde_esmeralda
+		section
+			div::before
+				content: ""
+				height: 100%
+				width: 2px
+				background: $blanco
+				position: absolute
+				right: -20px
+	article:nth-child(5)
+		background: $verde_lima
+		section
+			div::before
+				content: ""
+				height: 100%
+				width: 2px
+				background: $blanco
+				position: absolute
+				left: -20px
+	article:nth-child(6)
+		background: $verde_esmeralda_oscuro
+		section
+			div::before
+				content: ""
+				height: 100%
+				width: 2px
+				background: $blanco
+				position: absolute
+				right: -20px
+//Fin Servicios
+//Novedades
+.novedades_wrapp
+	padding-top: 200px
+	h2
+		padding-top: 0
+		color: $verde_esmeralda_oscuro
+		letter-spacing: 1px
+		line-height: 1.2
+	p
+		text-align: justify
+		margin: 20px 0
+		line-height: 1.2
+	#novedades_wrapp_content
+		.bx-wrapper
+			margin-bottom: 10px
+			.bx-next
+				background: url("../images/right.png") center center
+				background-size: 100%
+				right: -40px
+				bottom: 10%
+				top: 0
+				margin: auto
+			.bx-prev
+				background: url("../images/left.png") center center
+				background-size: 100%
+				left: -40px
+				bottom: 10%
+				top: 0
+				margin: auto
+		p
+			text-align: center
+.novedades_more
+	padding-top: 60px
+	margin-top: 70px
+
+//Fin novedades
+// Productos
+.products
+	h2
+		color: $verde_esmeralda_oscuro
+		text-align: center
+		width: 100%
+		font-size: 2.8rem
+		text-align: center
+	.grupo_producto
+		a
+			margin: 5px
+			figure
+				figcaption
+					padding: 10px
+					color: $blanco
+					margin-bottom: 7px
+					font-size: 1.6rem
+					letter-spacing: 1px
+		a:first-child
+			figure
+				figcaption
+					background: $verde_limon
+		a:nth-child(2)
+			figure
+				figcaption
+					background: $verde_lima
+		a:nth-child(3)
+			figure
+				figcaption
+					background: $amarillo
+		a:nth-child(4)
+			figure
+				figcaption
+					background: $naranja
+		a:nth-child(5)
+			figure
+				figcaption
+					background: $rojo
+		a:nth-child(6)
+			figure
+				figcaption
+					background: $verde_esmeralda_oscuro
+		a:nth-child(7)
+			figure
+				figcaption
+					background: $azul
+#listado_productos
+	h1
+		color: $blanco
+		padding: 20px 15px
+		text-transform: uppercase
+		letter-spacing: 2px
+		font-size: 1.8rem
+		margin-bottom: 10px
+	h2
+		font-size: 1.4rem
+		text-align: left
+		padding: 10px 0 5px
+		letter-spacing: 2px
+
+#product_group_detalle_active
+	.active_groups
+		opacity: .4
+
+#lista_producto
+	margin-top: 20px
+	li
+		padding: 2px 0
+		cursor: pointer
+	.producto_activado
+		color: $celeste
+#detalle_producto_seleccionado
+	.detalle_producto
+		li
+			display: none
+			section
+				border-top: 2px solid $verde_limon
+				border-bottom: 2px solid $verde_limon
+				padding: 30px 0
+				margin: 30px 0
+				h3
+					font-size: 1.8rem
+					margin-bottom: 20px
+					font-family: $fuente_principal
+					span
+						border-bottom: 5px $verde_limon solid
+						padding-right: 10px
+						padding-bottom: 10px
+
+		.producto_activado
+			display: block
+
+
+
+	// z-index: -1 !important
+
+.close_modal
+	z-index: -1
+	position: fixed
+
+.overflow
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.87)
+	z-index: -1
+	opacity: 0
+// @media all and (min-width: 15em) and (max-width: 63.98em)
+@media all and (max-width: 1087px)
+	header
+		nav
+			.logo
+				max-width: 180px !important
+				padding: 38px 15px
+				a
+					width: 100%
+					img
+						width: 100%
+						height: auto
+	header::after
+		height: 90px
+@media all and (max-width: 1070px)
+	header
+		nav
+			height: 90px
+			.logo
+				padding: 0 0
+			a
+				max-width: 100% !important
+				width: 100%
+				text-align: center
+
+				img
+					width: 200px
+			ul
+				height: 0px
+				overflow: hidden
+				opacity: 0
+	header::after
+		background: $blanco
+		opacity: 1
+	.header_slide
+		height: 90px
+	.header_slide::after
+		background: $verde_oscuro
+	#slider_home
+		margin-top: 90px
+@media all and (max-width: 1030px)
+	.novedades,
+	.novedades_more
+		a
+			max-width: 50% !important
+			width: 43%
+	footer
+		section
+			div
+				a
+					width: 100% !important
+					img
+						width: 250px
+				div
+					width: 50% !important
+	.novedades_wrapp
+		padding-top: 110px
+		h2
+			width: 100%
+		article
+			width: 100%
+		#novedades_wrapp_content
+			width: 100%
+			.bx-wrapper
+				width: 70%
+				margin: auto
+				// .bx-next
+				// 	right: 25%
+				// 	bottom: -40px
+				// 	top: inherit
+				// .bx-prev
+				// 	left: 25%
+				// 	bottom: -40px
+				// 	top: inherit
+@media all and (max-width: 800px)
+	.productos
+		figure,
+			width: 100%
+			.abajo,
+			.arriba
+				ul
+					opacity: 1
+	.textwidget
+		width: 80%
+	.team
+		img
+			width: 100%
+		.texto_team
+			width: 100%
+	.novedades,
+	.novedades_more
+		a
+			max-width: 100% !important
+			width: 100%
+			figure
+				height: 300px
+	.servicios_wrapp
+		article
+			section
+				width: 100%
+				img
+					opacity: 0
+					width: 1px
+					height: 1px
+	.novedades_wrapp
+		padding-top: 110px
+		h2
+			width: 100%
+		article
+			width: 100%
+		#novedades_wrapp_content
+			width: 100%
+			.bx-wrapper
+				width: 100%
+				.bx-next
+					right: 25%
+					bottom: -40px
+					top: inherit
+				.bx-prev
+					left: 25%
+					bottom: -40px
+					top: inherit
+	#nuestro_equipo_imagen
+		width: 80%
+
+@media all and (max-width: 520px)
+	footer
+		section
+			h3
+				font-size: 1.8rem
+				margin-top: 20px
+			div
+				a
+					width: 100% !important
+				div
+					width: 100% !important
+					font-size: 1.4rem
+	.derechos
+		font-size: 1.2rem
+
+	.slide1
+		.caption
+			margin-right: 0
+			font-size: 4rem
+			text-align: center
+			margin: auto
+	.about,
+	.calidad,
+	.certificacion,
+	.team .texto_team
+		p
+			text-align: justify
+	.calidad
+		p
+			width: 80%
+		ul
+			width: 100%
+			li
+				text-align: left
+	.calidad,
+	.certificacion
+		p
+			width: 100%
+	#comprometidos_calidad
+		.textwidget
+			width: 80%
+
+	#certificacion_nosotros
+		width: 100%
+	.team
+		.texto_team
+			margin-left: 0
+			.textwidget
+				width: 100%
+
+	#wrapp_plantas
+		img
+			width: 100%
+		p
+			width: 100%
+		.bx-wrapper
+			.bx-prev
+				bottom: -20px
+				left: 30%
+			.bx-next
+				bottom: -20px
+				right: 30%
+		#plantas
+			li
+				div
+					div
+						width: 100%!important
+	.banner
+		img
+			width: auto
+			height: 100%
+
+	.calidad
+		h2
+			width: 80%
+
+	.team
+		img
+			width: 100%
+		.texto_team
+			width: 100%
+
+	.novedades,
+	.novedades_more
+		a
+			max-width: 100% !important
+			width: 100%
+	.servicios_wrapp
+		article
+			section
+				width: 100%
+				img
+					opacity: 0
+					width: 1px
+					height: 1px
+	.novedades_wrapp
+		padding-top: 110px
+		h2
+			width: 100%
+		article
+			width: 100%
+		#novedades_wrapp_content
+			width: 100%
+			.bx-wrapper
+				width: 100%
+				.bx-next
+					right: 25%
+					bottom: -40px
+					top: inherit
+				.bx-prev
+					left: 25%
+					bottom: -40px
+					top: inherit
+	#nuestro_equipo_imagen
+		width: 100%
+
+	.servicios_wrapp
+		article
+			width: 100%
+			section
+				div
+					width: 70%
+					text-align: left
+				div::before
+					opacity: 0
+	.products
+		.grupo_producto
+			a
+				width: 100%
+				margin: 5px auto
+
+	#listado_productos
+		width: 100%
+		li
+			span
+				width: 100%
+			span:last-child
+				font-size: 1.4rem
+	#detalle_producto_seleccionado
+		background: $blanco
+		width: 80%
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: -1
+		opacity: 0
+		margin: auto
+		height: 90vh
+		overflow-y: auto
+		.close_modal
+			position: fixed
+			top: 2%
+			right: 6%
+			z-index: 9999999
+			width: 35px
+			height: 35px
+		.detalle_producto
+			li
+				img
+					width: 100%
+					height: auto
+				section
+					width: 80%
+					margin: 30px auto
+
+
+
+
+
+@keyframes fadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes fadeOut
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+
+.fadeInoverflow,
+.fadeInmodal
+	animation-name: fadeIn
+	animation-duration: .4s
+	animation-iteration-count: 1
+	animation-timing-function: ease-in
+	animation-direction: normal
+	animation-fill-mode: forwards
+
+	-webkit-animation-name: fadeIn
+	-webkit-animation-duration: .4s
+	-webkit-animation-iteration-count: 1
+	-webkit-animation-timing-function: ease-in
+	-webkit-animation-direction: normal
+	-webkit-animation-fill-mode: forwards
+
+	// z-index: 999998!important
+
+.fadeInmodal
+	animation-delay: .5s
+	-webkit-animation-delay: .5s
+
+	// z-index: 999999!important
+
+.fadeOutoverflow,
+.fadeOutmodal
+	animation-name: fadeOut
+	animation-duration: .6s
+	animation-iteration-count: 1
+	animation-timing-function: ease-out
+	animation-direction: normal
+	animation-fill-mode: forwards
+
+	-webkit-animation-name: fadeOut
+	-webkit-animation-duration: .6s
+	-webkit-animation-iteration-count: 1
+	-webkit-animation-timing-function: ease-out
+	-webkit-animation-direction: normal
+	-webkit-animation-fill-mode: forwards
+
+	// z-index: 999998!important
+
+// .fadeOutoverflow
+// 	animation-delay: .7s
+// 	-webkit-animation-delay: .7s
+	// z-index: 999999!important
