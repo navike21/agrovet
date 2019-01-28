@@ -271,7 +271,7 @@
 	    wp_enqueue_style('bastemp', get_bloginfo('template_url')."/assets/css/bastemp.min.css", 'bxslider', '1.0', 'all');
 	    wp_enqueue_style('slick1', get_bloginfo('template_url').'/assets/slick/slick.css','bastemp', '1.0', 'all');
 	    wp_enqueue_style('slick2', get_bloginfo('template_url').'/assets/slick/slick-theme.css','slick1', '1.0', 'all');
-	    wp_enqueue_style('styles-agrovet', get_bloginfo('template_url').'/assets/css/styles.css','slick2', '1.0', 'all');
+	    wp_enqueue_style('styles-agrovet', get_bloginfo('template_url').'/assets/css/styles.min.css','slick2', '1.0', 'all');
 	    // wp_enqueue_style('jquery-ui', get_bloginfo('template_url').'/_inc/css/jquery-ui.custom/ jquery-ui.custom.css','style-theme');
 	}
 	add_action('wp_print_styles', 'custom_css');
