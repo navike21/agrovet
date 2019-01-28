@@ -20,7 +20,7 @@
 			);
 			$pods_producto = pods($name_pod_producto, $params_producto);
 			if (0 < $pods_producto->total()) {
-				echo '<div class="w_80 section_top_justify productos">';
+				echo '<div class="w_80 section_top_center productos">';
 				$variante = 2;
 				while ($pods_producto->fetch()) {
 					$post_id_producto = $pods_producto->display('id');
