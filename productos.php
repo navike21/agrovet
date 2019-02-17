@@ -32,14 +32,14 @@ if ($slug_url_grupo_prod_id != "") {
 </section>
 <section class="triangle section_top_center products">
 <?php if ( have_posts() ) : the_post(); ?>
-	<!-- <h2><?php //the_title();?></h2> -->
-	<h2>ADITIVOS PARA ALIMENTOS BALANCEADOS</h2>
 	<div class="section_top_center w_80 grupo_producto">
+	<!-- <h2><?php //the_title();?></h2> -->
 	<!-- Listado de Grupos de Categorías -->
 	<?php
 		// ESTAMOS EN LA SECCIÓN PRODUCTOS O sub categorías.
 		if ($slug_url_grupo_prod_id == "") {
 			if ($slug_url_cat != "") {
+				echo '<h2>'; the_title(); echo '</h2>';
 				$name_pod_grupo_producto = "grupo-de-producto";
 				$params_grupo_producto = array(
 					'limit' => -1,
