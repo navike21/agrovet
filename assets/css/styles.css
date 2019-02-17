@@ -193,7 +193,7 @@ header::after {
 }
 
 .banner {
-  height: 350px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -1470,4 +1470,3 @@ footer img {
   -webkit-animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
 }
-/*# sourceMappingURL=styles.css.map */
