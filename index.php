@@ -93,79 +93,79 @@
 		</div>
 	</section>
 
-	<section id="planta" class="w_100 section_top_center plantas">
-		<?php if ( is_active_sidebar( 'planta_text' ) ) : ?>
-		<?php dynamic_sidebar( 'planta_text' ); ?>
-		<?php endif; ?>
+	<!-- <section id="planta" class="w_100 section_top_center plantas">
+		<?php //if ( is_active_sidebar( 'planta_text' ) ) : ?>
+		<?php //dynamic_sidebar( 'planta_text' ); ?>
+		<?php //endif; ?>
 		<div id="wrapp_plantas" class="w_80">
 			<ul id="plantas">
 			<?php
-				$name_pod = "planta";
-				$params = array(
-					'limit' => -1
-				);
-				$pods = pods($name_pod, $params);
+				// $name_pod = "planta";
+				// $params = array(
+				// 	'limit' => -1
+				// );
+				// $pods = pods($name_pod, $params);
 
-				if (0 < $pods->total()) {
-					while ($pods->fetch()) {
-						$post_id = $pods->display('id');
-				echo '	<li>
-							<div class="w_100 section_middle_justify">';
-				echo '			<div class="w_50">';
-				echo 				get_the_post_thumbnail ($post_id, medium_large);
-				echo '			</div>';
-				echo '			<div class="w_47">
-									<strong>'.$pods->display('post_title').'</strong>
-									<div>'.$pods->display('content').'</div>
-								</div>
-							</div>
-						</li>';
-					}
-				}
+				// if (0 < $pods->total()) {
+				// 	while ($pods->fetch()) {
+				// 		$post_id = $pods->display('id');
+				// echo '	<li>
+				// 			<div class="w_100 section_middle_justify">';
+				// echo '			<div class="w_50">';
+				// echo 				get_the_post_thumbnail ($post_id, medium_large);
+				// echo '			</div>';
+				// echo '			<div class="w_47">
+				// 					<strong>'.$pods->display('post_title').'</strong>
+				// 					<div>'.$pods->display('content').'</div>
+				// 				</div>
+				// 			</div>
+				// 		</li>';
+				// 	}
+				// }
 			?>
 			</ul>
 		</div>
-	</section>
+	</section> -->
 
-	<section class="w_100 novedades section_top_center">
+	<!-- <section class="w_100 novedades section_top_center">
 		<div class="w_100 section_top_center">
-			<?php if ( is_active_sidebar( 'novedades_text' ) ) : ?>
-			<?php dynamic_sidebar( 'novedades_text' ); ?>
-			<?php endif; ?>
+			<?php //if ( is_active_sidebar( 'novedades_text' ) ) : ?>
+			<?php //dynamic_sidebar( 'novedades_text' ); ?>
+			<?php //endif; ?>
 		</div>
 		<div class="w_80 section_top_center">
 			<ul id="novedades_home" class="w_100">
 			<?php
-				$name_pod_novedades = "novedades";
-				$params_novedades = array(
-					'limit' 	=> 3,
-					'orderby' 	=> 'date DESC'
-				);
-				$pods_novedades = pods($name_pod_novedades, $params_novedades);
+				// $name_pod_novedades = "novedades";
+				// $params_novedades = array(
+				// 	'limit' 	=> 3,
+				// 	'orderby' 	=> 'date DESC'
+				// );
+				// $pods_novedades = pods($name_pod_novedades, $params_novedades);
 
-				if (0 < $pods_novedades->total()) {
-					while ($pods_novedades->fetch()) {
-						$post_id_novedades = $pods_novedades->display('id');
-						$nombre_novedad = $pods_novedades->display('post_title');
-						$extracto_novedad = $pods_novedades->display('excerpt');
-						$url_image_novedades = pods_image_url ( $post_id_novedades, 'medium', 0, false );
-				echo '<li>';
-				echo '	<a class="section_middle_center w_100 novedad_home" href="'.$pods_novedades->display('permalink').'">
-							<figure class="w_97">';
-				echo '			<img src="'.$url_image_novedades.'" width="100%" height="auto" alt="'.$nombre_novedad.'" />
-								<figcaption class="section_middle_center">
-									<h3 class="w_100">'.$nombre_novedad.'</h3>';
-				echo 				'<div>'.$extracto_novedad.'</div>';
-				echo '			</figcaption>
-							</figure>
-						</a>
-					</li>';
-					}
-				}
+				// if (0 < $pods_novedades->total()) {
+				// 	while ($pods_novedades->fetch()) {
+				// 		$post_id_novedades = $pods_novedades->display('id');
+				// 		$nombre_novedad = $pods_novedades->display('post_title');
+				// 		$extracto_novedad = $pods_novedades->display('excerpt');
+				// 		$url_image_novedades = pods_image_url ( $post_id_novedades, 'medium', 0, false );
+				// echo '<li>';
+				// echo '	<a class="section_middle_center w_100 novedad_home" href="'.$pods_novedades->display('permalink').'">
+				// 			<figure class="w_97">';
+				// echo '			<img src="'.$url_image_novedades.'" width="100%" height="auto" alt="'.$nombre_novedad.'" />
+				// 				<figcaption class="section_middle_center">
+				// 					<h3 class="w_100">'.$nombre_novedad.'</h3>';
+				// echo 				'<div>'.$extracto_novedad.'</div>';
+				// echo '			</figcaption>
+				// 			</figure>
+				// 		</a>
+				// 	</li>';
+				// 	}
+				// }
 			?>
 			</ul>
 		</div>
-	</section>
+	</section> -->
 	<?php  //get_sidebar()?>
 
 <?php get_footer(); ?>
