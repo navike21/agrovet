@@ -13,7 +13,7 @@ $slug_url_grupo_prod = $val_hash[4];
 $slug_url_grupo_prod_id = $val_hash[5];
 
 if ($slug_url_grupo_prod_id != "") {
-	$url_image_grupo_select = pods_image_url ( $slug_url_grupo_prod_id, 'medium', 0, false );
+	$url_image_grupo_select = pods_image_url ( $slug_url_grupo_prod_id, 'null', 0, false );
 }
 
 ?>
