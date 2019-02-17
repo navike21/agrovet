@@ -125,7 +125,7 @@ if ($slug_url_grupo_prod_id != "") {
 			$params_grupo_select = array(
 				'limit' => 1,
 				'where' => 'id ='.$slug_url_grupo_prod_id,
-				'orderby' => 'date ASC'
+				'orderby' => 'date DESC'
 			);
 			$pods_grupo_select = pods($name_pod_grupo_select, $params_grupo_select);
 			if (0 < $pods_grupo_select->total()) {
