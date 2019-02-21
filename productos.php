@@ -230,7 +230,7 @@ if ($slug_url_grupo_prod_id != "") {
 										$texto_siglas_producto_lista = $pods_producto->display('texto_siglas');
 										$foto_animal_producto_lista = $pods_producto->display('foto_animal');
 
-										if($texto_siglas_producto_lista === ''){
+										if($texto_siglas_producto_lista == ''){
 											$texto_siglas_producto_lista = '';
 										}
 
