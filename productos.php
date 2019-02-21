@@ -233,6 +233,9 @@ if ($slug_url_grupo_prod_id != "") {
 										if($texto_siglas_producto_lista == ''){
 											$texto_siglas_producto_lista = '';
 										}
+										else{
+											$texto_siglas_producto_lista = '('.$texto_siglas_producto_lista.')';
+										}
 
 										//CAMPOS RELACIONADOS
 										$categoria_lista = pods_field($nombre_pod_producto, $id_producto_lista, 'cetegoria-de-producto');
@@ -246,7 +249,7 @@ if ($slug_url_grupo_prod_id != "") {
 											else{
 												$class_active2 = "";
 											}
-											echo '<li data-foto_animal="'.$foto_animal_producto_lista.'" data-detalle="'.$id_producto_lista.$slug_producto_lista.'" class="w_100 section_top_left '.$class_active2.'"><span class="w_50">'.$nombre_producto_lista.'</span><span class="w_50">('.$texto_siglas_producto_lista.')</span></li>';
+											echo '<li data-foto_animal="'.$foto_animal_producto_lista.'" data-detalle="'.$id_producto_lista.$slug_producto_lista.'" class="w_100 section_top_left '.$class_active2.'"><span class="w_50">'.$nombre_producto_lista.'</span><span class="w_50">'.$texto_siglas_producto_lista.'</span></li>';
 										}
 									}
 									echo '</ul>';
