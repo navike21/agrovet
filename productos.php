@@ -230,6 +230,10 @@ if ($slug_url_grupo_prod_id != "") {
 										$texto_siglas_producto_lista = $pods_producto->display('texto_siglas');
 										$foto_animal_producto_lista = $pods_producto->display('foto_animal');
 
+										if($texto_siglas_producto_lista === ''){
+											$texto_siglas_producto_lista = '';
+										}
+
 										//CAMPOS RELACIONADOS
 										$categoria_lista = pods_field($nombre_pod_producto, $id_producto_lista, 'cetegoria-de-producto');
 										$grupo_lista = pods_field($nombre_pod_producto, $id_producto_lista, 'grupo_producto');
@@ -271,7 +275,7 @@ if ($slug_url_grupo_prod_id != "") {
 							$categoria_lista = pods_field($nombre_pod_producto, $id_producto_lista, 'cetegoria-de-producto');
 							$grupo_lista = pods_field($nombre_pod_producto, $id_producto_lista, 'grupo_producto');
 
-							$url_image_producto_lista = pods_image_url ( $id_producto_lista, 'medium', 0, false );
+							$url_image_producto_lista = pods_image_url ( $id_producto_lista, 'null', 0, false );
 							if ($categoria_lista["ID"] == $slug_url_cat_id && $grupo_lista["ID"] == $slug_url_grupo_prod_id) {
 								if ($activo_para_detalle == $id_producto_lista.$slug_producto_lista) {
 									$class_active_sub = "producto_activado activar_pro";
