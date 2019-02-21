@@ -184,6 +184,11 @@ if ($slug_url_grupo_prod_id != "") {
 												// echo '<pre>';
 												// print_r($grupo_detalle_producto);
 												// echo '</pre>';
+												if($texto_siglas_producto_lista == ''){
+													$texto_siglas_producto_lista = '';
+												} else{
+													$texto_siglas_producto_lista = '('.$texto_siglas_producto_lista.')';
+												}
 												$grupo_detalle_producto[0]["slug"];
 												if ($slug_lista_producto == $grupo_detalle_producto[0]["slug"]) {
 													// echo $foto_animal_producto_lista2 = pods_field($nombre_pod_producto, $id_producto_lista, 'foto_animal');
@@ -200,7 +205,7 @@ if ($slug_url_grupo_prod_id != "") {
 														else{
 															$class_active = "";
 														}
-														echo '<li data-foto_animal="'.$url_lista_producto.'" data-detalle="'.$id_producto_lista.$slug_producto_lista.'" class="w_100 section_top_left '.$class_active.'"><span class="w_50">'.$nombre_producto_lista.'</span><span class="w_50">('.$texto_siglas_producto_lista.')</span></li>';
+														echo '<li data-foto_animal="'.$url_lista_producto.'" data-detalle="'.$id_producto_lista.$slug_producto_lista.'" class="w_100 section_top_left '.$class_active.'"><span class="w_50">'.$nombre_producto_lista.'</span><span class="w_50">'.$texto_siglas_producto_lista.'</span></li>';
 													}
 												}
 
@@ -232,8 +237,7 @@ if ($slug_url_grupo_prod_id != "") {
 
 										if($texto_siglas_producto_lista == ''){
 											$texto_siglas_producto_lista = '';
-										}
-										else{
+										} else{
 											$texto_siglas_producto_lista = '('.$texto_siglas_producto_lista.')';
 										}
 
