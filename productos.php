@@ -1,6 +1,7 @@
 <?php
 	/*Template Name: Productos */
 get_header();
+global $post;
 $url_actual = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";;
 $val_hash_url = explode("?", $url_actual);
 $val_hash = explode("=", $val_hash_url[1]);
@@ -46,8 +47,9 @@ if ($slug_url_grupo_prod_id != "") {
 					'limit' => -1,
 					'orderby' => 'date ASC'
 				);
+				$mypod = pods( $post->post_type, $post->$slug_url_grupo_prod_id );
+				echo '<h2>'.$mypod->display('name').'</h2>';
 				$pods_grupo_producto = pods($name_pod_grupo_producto, $params_grupo_producto);
-				// echo '<h2>'.$pods_grupo_producto->display('name').'</h2>';
 				if (0 < $pods_grupo_producto->total()) {
 					while ($pods_grupo_producto->fetch()) {
 						$post_id_grupo_producto = $pods_grupo_producto->display('id');
