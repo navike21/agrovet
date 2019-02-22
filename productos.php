@@ -130,7 +130,7 @@ if ($slug_url_grupo_prod_id != "") {
 			);
 			$pods_grupo_select = pods($name_pod_grupo_select, $params_grupo_select);
 			if (0 < $pods_grupo_select->total()) {
-			echo '<div class="w_100 section_top_justify">';
+			echo '<div class="w_100 section_top_justify">ggg';
 				echo '<section id="listado_productos" class="section_top_center w_40">';
 					while ($pods_grupo_select->fetch()) {
 						$nombre_grupo_select = $pods_grupo_select->display('name');
