@@ -12,6 +12,8 @@ $slug_url_sub_cat_id = $val_hash[3];
 $slug_url_grupo_prod = $val_hash[4];
 $slug_url_grupo_prod_id = $val_hash[5];
 
+$subCategoria_titulo = "";
+
 if ($slug_url_grupo_prod_id != "") {
 	$url_image_grupo_select = pods_image_url ( $slug_url_grupo_prod_id, 'null', 0, false );
 }
@@ -39,7 +41,6 @@ if ($slug_url_grupo_prod_id != "") {
 		// ESTAMOS EN LA SECCIÓN PRODUCTOS O sub categorías.
 		if ($slug_url_grupo_prod_id == "") {
 			if ($slug_url_cat != "") {
-				echo '<h2>'; the_title(); echo '</h2>';
 				$name_pod_grupo_producto = "grupo-de-producto";
 				$params_grupo_producto = array(
 					'limit' => -1,
@@ -60,9 +61,9 @@ if ($slug_url_grupo_prod_id != "") {
 						if ($galeria_img["post_name"] == $slug_url_sub_cat) {
 							echo '<a href="/productos/?'.$slug_url_cat.'='.$slug_url_cat_id.'='.$slug_url_sub_cat.'='.$slug_url_sub_cat_id.'='.$slug_grupo_producto.'='.$post_id_grupo_producto.'" class="w_32" data-minwidth="250">';
 							echo '	<figure>';
+							echo '		<img src="'.$url_image_grupo_producto.'" width="100%" height="auto" alt="'.$nombre_grupo_producto.'" />';
 							echo '		<figcaption style="background-color:'.$color_grupo_producto.';">'.strtoupper($nombre_grupo_producto).'</figcaption>';
-							echo '			<img src="'.$url_image_grupo_producto.'" width="100%" height="auto" alt="'.$nombre_grupo_producto.'" />';
-							echo '		</figcaption>';
+							// echo '		</figcaption>';
 							echo '	</figure>';
 							echo '</a>';
 						}
@@ -71,6 +72,7 @@ if ($slug_url_grupo_prod_id != "") {
 			}
 			// EN CASO ESTUVIERA LIBRE SIN DATOS EL URL
 			else{
+				echo '<h2>'; ?> <?php the_title(); ?> <?php echo '</h2>';
 				$name_pod_producto = "categoria-producto";
 				$params_producto = array(
 					'limit' => -1,
@@ -130,7 +132,8 @@ if ($slug_url_grupo_prod_id != "") {
 			);
 			$pods_grupo_select = pods($name_pod_grupo_select, $params_grupo_select);
 			if (0 < $pods_grupo_select->total()) {
-			echo '<div class="w_100 section_top_justify">ggg';
+			echo '<div class="w_100 section_top_justify">';
+			echo '<h2>'.$pods_grupo_select->display('name').'</h2>';
 				echo '<section id="listado_productos" class="section_top_center w_40">';
 					while ($pods_grupo_select->fetch()) {
 						$nombre_grupo_select = $pods_grupo_select->display('name');
