@@ -145,7 +145,8 @@ if ($slug_url_grupo_prod_id != "") {
 						// GRUPOS DE LISTA DE PRODUCTOS.
 						$nombre_pod_grupo_lista_producto = "grupo-detalle-producto";
 						$params_pod_grupo_lista_producto = array(
-							'limit' => -1
+							'limit' => -1,
+							'orderby' => 'name DESC'
 						);
 						$activo_para_detalle = "";
 						$pods_lista_producto = pods($nombre_pod_grupo_lista_producto, $params_pod_grupo_lista_producto);
