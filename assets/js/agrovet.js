@@ -151,7 +151,7 @@ $(document).ready(function() {
 			]
 		});
 	}
-
+	scrollFunction();
 	window.onscroll = function() {scrollFunction()};
 
 	// alert($(window).width());
