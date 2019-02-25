@@ -202,7 +202,7 @@ $(document).ready(function() {
 
 	function scrollFunction() {
 
-	    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+	    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
 			$("#navbar").addClass('header_slide').find('img').attr('src', imagen_footer);
 	        // document.getElementById("navbar").style.top = "0";
 	    } else {

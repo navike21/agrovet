@@ -47,7 +47,7 @@ if ($slug_url_grupo_prod_id != "") {
 					'limit' => -1,
 					'orderby' => 'date ASC'
 				);
-				$mypod = pods( $post->post_type, $post->$slug_url_grupo_prod_id );
+				$mypod = pods( 'categoria-producto', $post->$slug_url_grupo_prod_id );
 				echo '<h2>'.$mypod->display('name').'</h2>';
 				$pods_grupo_producto = pods($name_pod_grupo_producto, $params_grupo_producto);
 				if (0 < $pods_grupo_producto->total()) {
