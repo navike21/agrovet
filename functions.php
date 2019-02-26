@@ -195,7 +195,7 @@
 		register_sidebar( array(
 			'name'          => 'Comprometidos con la calidad',
 			'id'            => 'comprometidos_calidad',
-			'before_widget' => '<section id="comprometidos_calidad" class="w_100 section_top_center calidad">',
+			'before_widget' => '<section id="comprometidos-con-la-calidad" class="w_100 section_top_center calidad">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="w_100 align_center">',
 			'after_title'   => '</h2>',
