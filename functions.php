@@ -195,7 +195,7 @@
 		register_sidebar( array(
 			'name'          => 'Comprometidos con la calidad',
 			'id'            => 'comprometidos_calidad',
-			'before_widget' => '<section id="comprometidos-con-la-calidad" class="w_100 section_top_center calidad">',
+			'before_widget' => '<section id="comprometidos_calidad" class="w_100 section_top_center calidad">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="w_100 align_center">',
 			'after_title'   => '</h2>',
@@ -271,7 +271,7 @@
 	    wp_enqueue_style('bastemp', get_bloginfo('template_url')."/assets/css/bastemp.min.css", 'bxslider', '1.0', 'all');
 	    wp_enqueue_style('slick1', get_bloginfo('template_url').'/assets/slick/slick.css','bastemp', '1.0', 'all');
 	    wp_enqueue_style('slick2', get_bloginfo('template_url').'/assets/slick/slick-theme.css','slick1', '1.0', 'all');
-	    wp_enqueue_style('styles-agrovet', get_bloginfo('template_url').'/assets/css/styles.min.css','slick2', '1.1', 'all');
+	    wp_enqueue_style('styles-agrovet', get_bloginfo('template_url').'/assets/css/styles.min.css','slick2', '1.0', 'all');
 	    // wp_enqueue_style('jquery-ui', get_bloginfo('template_url').'/_inc/css/jquery-ui.custom/ jquery-ui.custom.css','style-theme');
 	}
 	add_action('wp_print_styles', 'custom_css');
@@ -301,7 +301,7 @@
 
 		// Registramos Bastemp
 		wp_deregister_script( 'agrovet-js' );
-		wp_register_script( 'agrovet-js', get_bloginfo('template_url').'/assets/js/agrovet.min.js', false, '1.1', false );
+		wp_register_script( 'agrovet-js', get_bloginfo('template_url').'/assets/js/agrovet.min.js', false, '1.0', false );
 		wp_enqueue_script( 'agrovet-js' );
 
 		// //REGISTRAMOS BOOTSTRAP

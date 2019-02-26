@@ -35,7 +35,7 @@ get_header();
 		<p><?php _e('Ups!, esta entrada no existe.'); ?></p>
 	<?php endif; ?>
 </section>
-<section id="historia" class="historia section_middle_center">
+<section id="historia_wrapp" class="historia section_middle_center">
 	<h2 class="w_100 align_center">HISTORIA</h2>
 	<div class="w_80 section_top_center wrapp_history">
 		<div class="slider slider-nav">
@@ -73,7 +73,7 @@ get_header();
 		</div>
 	</div>
 </section>
-<section id="nuestro-equipo" class="team section_top_center">
+<section class="team section_top_center">
 	<h2>NUESTRO EQUIPO</h2>
 	<div class="w_80 section_middle_center">
 		<?php if ( is_active_sidebar( 'nuestro_equipo_imagen' ) ) : ?>
