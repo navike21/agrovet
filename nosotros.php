@@ -73,7 +73,7 @@ get_header();
 		</div>
 	</div>
 </section>
-<section class="team section_top_center">
+<section id="nuestro-equipo" class="team section_top_center">
 	<h2>NUESTRO EQUIPO</h2>
 	<div class="w_80 section_middle_center">
 		<?php if ( is_active_sidebar( 'nuestro_equipo_imagen' ) ) : ?>
