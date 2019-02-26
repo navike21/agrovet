@@ -25,7 +25,7 @@ $(document).ready(function() {
 		});
 	}
 
-	var historia = $("#historia_wrapp").html();
+	var historia = $("#historia").html();
 	if (historia != undefined) {
 		$('.slider-nav').slick({
 			slidesToShow: 5,
