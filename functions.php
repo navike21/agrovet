@@ -301,7 +301,7 @@
 
 		// Registramos Bastemp
 		wp_deregister_script( 'agrovet-js' );
-		wp_register_script( 'agrovet-js', get_bloginfo('template_url').'/assets/js/agrovet.min.js', false, '1.0', false );
+		wp_register_script( 'agrovet-js', get_bloginfo('template_url').'/assets/js/agrovet.min.js', false, '1.1', false );
 		wp_enqueue_script( 'agrovet-js' );
 
 		// //REGISTRAMOS BOOTSTRAP
