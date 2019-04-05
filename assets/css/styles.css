@@ -842,7 +842,7 @@ footer img {
   width: 2px;
   background: #ffffff;
   position: absolute;
-  right: -20px;
+  left: -20px;
 }
 
 .servicios_wrapp article:nth-child(3) {
@@ -855,7 +855,7 @@ footer img {
   width: 2px;
   background: #ffffff;
   position: absolute;
-  left: -20px;
+  right: -20px;
 }
 
 .servicios_wrapp article:nth-child(4) {
@@ -868,7 +868,7 @@ footer img {
   width: 2px;
   background: #ffffff;
   position: absolute;
-  right: -20px;
+  left: -20px;
 }
 
 .servicios_wrapp article:nth-child(5) {
@@ -881,7 +881,7 @@ footer img {
   width: 2px;
   background: #ffffff;
   position: absolute;
-  left: -20px;
+  right: -20px;
 }
 
 .servicios_wrapp article:nth-child(6) {
@@ -894,7 +894,7 @@ footer img {
   width: 2px;
   background: #ffffff;
   position: absolute;
-  right: -20px;
+  left: -20px;
 }
 
 .novedades_wrapp {
@@ -1470,4 +1470,3 @@ footer img {
   -webkit-animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
 }
-/*# sourceMappingURL=styles.css.map */
