@@ -32,7 +32,7 @@ $pods_servicios = pods($name_pod_servicios, $params_servicios);
 					echo '			<img src="'.$url_image_servicios.'" width="100%" height="auto" alt="'.$nombre_servicio.'" />
 								</section>
 								<section class="w_50 section_middle_center fondo_color">
-									<div class="w_60 align_right">';
+									<div class="w_60 align_left">';
 					echo '				<h3>'.$nombre_servicio.'</h3>';
 					echo 				$pods_servicios->display( 'content' );
 					echo '			</div>
