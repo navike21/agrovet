@@ -325,11 +325,10 @@ $(document).ready(function() {
 	if (pathname == '/servicios/'){
 		$('#menu-item-53 > ul > li > a').click(function(e){
 			var tag = $(this).attr('href');
-			console.log(tag);
-			console.log(tag.split('/'));
-			console.log(tag[2]);
+			var ele = tag.split('/');
+			console.log(ele);
 			$('html, body').stop().animate({
-				scrollTop: $(tag[2].offset()).top
+				scrollTop: $(ele[2].offset()).top
      }, 1000);
 		});
 	}
