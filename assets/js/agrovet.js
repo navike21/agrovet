@@ -319,15 +319,15 @@ $(document).ready(function() {
 		a ++;
 	});
 
-	$(".sub-menu > li > a").on('click', function (e) { 
+	$("#menu-item-53 > ul > li > a").on('click', function (e) { 
 		var target = $(this.getAttribute('href'));
 		console.log($(this));
 		console.log(target);
-		if (target.length) {
-			e.preventDefault();
-			$('html, body').stop().animate({
-				scrollTop: target.offset().top
-			}, 1000);
-		}
+		// if (target.length) {
+		// 	e.preventDefault();
+		// 	$('html, body').stop().animate({
+		// 		scrollTop: target.offset().top
+		// 	}, 1000);
+		// }
 	})
 });
