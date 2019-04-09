@@ -319,15 +319,18 @@ $(document).ready(function() {
 		a ++;
 	});
 
-	$("#menu-item-53 > ul > li > a").on('click', function (e) { 
-		var target = $(this.getAttribute('href'));
-		console.log($(this));
-		console.log(target);
-		// if (target.length) {
-		// 	e.preventDefault();
-		// 	$('html, body').stop().animate({
-		// 		scrollTop: target.offset().top
-		// 	}, 1000);
-		// }
-	})
+	document.querySelectorAll('.sub-menu > li > a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+			let header = document.getElementById('header').offsetHeight;
+			let attribute = document.querySelector(this.getAttribute('href'));
+			let position = parseInt(attribute.offsetTop) - (parseInt(header) + 20);
+
+			window.scrollTo({
+				left: 0,
+				top: position,
+				behavior: 'smooth'
+			});
+		});
+	});
 });
