@@ -323,8 +323,8 @@ $(document).ready(function() {
 		anchor.addEventListener('click', function (e) {
 			e.preventDefault();
 			let header = document.getElementById('header').offsetHeight;
-			console.log();
 			let href = this.getAttribute('href').split();
+			console.log(href);
 
 			alert(href[1]);
 			
