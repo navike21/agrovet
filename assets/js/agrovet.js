@@ -318,4 +318,9 @@ $(document).ready(function() {
 		}
 		a ++;
 	});
+
+	$(".sub-menu > li > a").on('click', function () { 
+		let href = $(this).hash;
+		alert(href);
+	})
 });
