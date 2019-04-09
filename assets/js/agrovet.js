@@ -326,10 +326,11 @@ $(document).ready(function() {
 		$('#menu-item-53 > ul > li > a').click(function(e){
 			var tag = $(this).attr('href');
 			var ele = tag.split('/');
-			console.log(ele);
-			console.log(ele[2]);
+			var ele2 = ele[2];
+			// console.log(ele);
+			// console.log(ele[2]);
 			$('html, body').stop().animate({
-				scrollTop: ele[2].offset().top
+				scrollTop: ele2.offset().top
 			}, 1000);
 		});
 	}
