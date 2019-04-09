@@ -329,8 +329,8 @@ $(document).ready(function() {
 			console.log(ele);
 			console.log(ele[2]);
 			$('html, body').stop().animate({
-				scrollTop: $(ele[2].offset()).top
-     }, 1000);
+				scrollTop: ele[2].offset().top
+			}, 1000);
 		});
 	}
 });
