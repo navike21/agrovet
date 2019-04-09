@@ -323,6 +323,8 @@ $(document).ready(function() {
 		anchor.addEventListener('click', function (e) {
 			e.preventDefault();
 			let header = document.getElementById('header').offsetHeight;
+			console.log(this.getAttribute('href'));
+			
 			let attribute = document.querySelector(this.getAttribute('href'));
 			let position = parseInt(attribute.offsetTop) - (parseInt(header) + 20);
 
