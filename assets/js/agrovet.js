@@ -320,9 +320,12 @@ $(document).ready(function() {
 	});
 
 	$(".sub-menu > li > a").on('click', function (e) { 
-		e.preventDefault();
-		$('html, body').animate({
-			scrollTop: $($.attr(this, 'href')).offset().top
-		}, 500);
+		var target = $(this.getAttribute('href'));
+		if (target.length) {
+			e.preventDefault();
+			$('html, body').stop().animate({
+				scrollTop: target.offset().top
+			}, 1000);
+		}
 	})
 });
