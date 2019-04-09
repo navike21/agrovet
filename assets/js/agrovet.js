@@ -330,7 +330,7 @@ $(document).ready(function() {
 			// console.log(ele);
 			// console.log(ele[2]);
 			$('html, body').stop().animate({
-				scrollTop: ele2.offset().top
+				scrollTop: $(ele2).offset().top
 			}, 1000);
 		});
 	}
