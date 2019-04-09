@@ -328,14 +328,14 @@ $(document).ready(function() {
 
 			alert(href[1]);
 			
-			let attribute = document.querySelector(this.getAttribute('href'));
-			let position = parseInt(attribute.offsetTop) - (parseInt(header) + 20);
+			// let attribute = document.querySelector(this.getAttribute('href'));
+			// let position = parseInt(attribute.offsetTop) - (parseInt(header) + 20);
 
-			window.scrollTo({
-				left: 0,
-				top: position,
-				behavior: 'smooth'
-			});
+			// window.scrollTo({
+			// 	left: 0,
+			// 	top: position,
+			// 	behavior: 'smooth'
+			// });
 		});
 	});
 });
