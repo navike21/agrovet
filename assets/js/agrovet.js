@@ -324,7 +324,7 @@ $(document).ready(function() {
 
 	if (pathname == '/servicios/'){
 		$('#menu-item-53 > ul > li > a').click(function(e){
-			var yo = $(this);
+			var yo = $(this).getAttribute('href');
 			console.log(yo);
 		});
 	}
