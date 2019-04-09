@@ -319,23 +319,6 @@ $(document).ready(function() {
 		a ++;
 	});
 
-	document.querySelectorAll('.sub-menu > li > a[href^="#"]').forEach(anchor => {
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
-			let header = document.getElementById('header').offsetHeight;
-			let href = this.getAttribute('href').split();
-			console.log(href);
-
-			alert(href[1]);
-			
-			// let attribute = document.querySelector(this.getAttribute('href'));
-			// let position = parseInt(attribute.offsetTop) - (parseInt(header) + 20);
-
-			// window.scrollTo({
-			// 	left: 0,
-			// 	top: position,
-			// 	behavior: 'smooth'
-			// });
-		});
-	});
+	var pathname = window.location.pathname;
+	alert(pathname);
 });
