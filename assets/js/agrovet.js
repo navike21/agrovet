@@ -321,6 +321,8 @@ $(document).ready(function() {
 
 	$(".sub-menu > li > a").on('click', function (e) { 
 		var target = $(this.getAttribute('href'));
+		console.log($(this));
+		console.log(target);
 		if (target.length) {
 			e.preventDefault();
 			$('html, body').stop().animate({
