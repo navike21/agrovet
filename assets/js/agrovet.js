@@ -320,5 +320,12 @@ $(document).ready(function() {
 	});
 
 	var pathname = window.location.pathname;
-	alert(pathname);
+	console.log(pathname);
+
+	if (pathname == '/servicios/'){
+		$('#menu-item-53 > ul > li > a').click(function(e){
+			var yo = $(this);
+			console.log(yo);
+		});
+	}
 });
