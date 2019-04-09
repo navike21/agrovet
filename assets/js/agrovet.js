@@ -326,10 +326,10 @@ $(document).ready(function() {
 		$('#menu-item-53 > ul > li > a').click(function(e){
 			var tag = $(this).attr('href');
 			console.log(tag);
-			console.log(tag.split());
-			console.log(tag[1]);
+			console.log(tag.split('/'));
+			console.log(tag[2]);
 			$('html, body').stop().animate({
-				scrollTop: $(tag.offset()).top
+				scrollTop: $(tag[2].offset()).top
      }, 1000);
 		});
 	}
