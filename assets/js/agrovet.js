@@ -325,9 +325,9 @@ $(document).ready(function() {
 	if (pathname == '/servicios/'){
 		$('#menu-item-53 > ul > li > a').click(function(e){
 			var tag = $(this).attr('href');
-			$('html, body').animate({
-				scrollTop: tag.offset().top
-			}, 'slow');
+			$('html, body').stop().animate({
+				scrollTop: $(tag.offset()).top
+     }, 1000);
 		});
 	}
 });
