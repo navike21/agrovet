@@ -327,11 +327,10 @@ $(document).ready(function() {
 			var tag = $(this).attr('href');
 			var ele = tag.split('/');
 			var ele2 = ele[2];
-			var navbar = $("#navbar").offsetHeight;
 			// console.log(ele);
 			// console.log(ele[2]);
 			$('html, body').stop().animate({
-				scrollTop: parseInt($(ele2).offset().top) - (parseInt(navbar) + 40)
+				scrollTop: parseInt($(ele2).offset().top) + 100
 			}, 1000);
 		});
 	}
