@@ -327,6 +327,7 @@ $(document).ready(function() {
 			var tag = $(this).attr('href');
 			var ele = tag.split('/');
 			console.log(ele);
+			console.log(ele[2]);
 			$('html, body').stop().animate({
 				scrollTop: $(ele[2].offset()).top
      }, 1000);
