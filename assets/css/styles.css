@@ -1479,14 +1479,26 @@ footer img {
   }
   #formularioContacto .nf-form-cont {
     width: 100%;
+    margin-bottom: 20px;
   }
-  #formularioContacto input {
+  #formularioContacto input,
+  #formularioContacto textarea {
     background-color: #ffffff;
-    padding: 5px 10px;
+    padding: 10px 10px;
+    padding-border: 1px solid #b3b3b3ed !important;
+  }
+  #formularioContacto input[type="submit"] {
+    background-color: #03320e;
+    color: #ffffff;
   }
 }
 
 @media all and (min-width: 1024px) {
+  #formularioContacto {
+    background-image: url("https://agrovet.navike21.com/wp-content/uploads/2019/04/pollo-sobre-fondo-blanco_78621-523.jpg");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
   #formularioContacto .nf-form-cont {
     margin-right: 50%;
     width: 50%;
