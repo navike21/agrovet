@@ -1485,9 +1485,9 @@ footer img {
   #formularioContacto textarea {
     background-color: #ffffff;
     padding: 10px 10px;
-    padding-border: 1px solid #b3b3b3ed !important;
+    padding-border: 1px solid #b3b3b3ed;
   }
-  #formularioContacto input[type="submit"] {
+  #formularioContacto input[type="button"] {
     background-color: #03320e;
     color: #ffffff;
   }
@@ -1496,6 +1496,8 @@ footer img {
 @media all and (min-width: 1024px) {
   #formularioContacto {
     background-image: url("https://agrovet.navike21.com/wp-content/uploads/2019/04/pollo-sobre-fondo-blanco_78621-523.jpg");
+    background-position: right bottom;
+    background-repeat: no-repeat;
   }
   #formularioContacto .nf-form-cont {
     margin-right: 50%;
