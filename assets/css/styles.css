@@ -1483,13 +1483,15 @@ footer img {
   }
   #formularioContacto input,
   #formularioContacto textarea {
+    border: 1px solid #b3b3b3ed;
     background-color: #ffffff;
     padding: 10px 10px;
-    padding-border: 1px solid #b3b3b3ed;
   }
   #formularioContacto input[type="button"] {
     background-color: #03320e;
+    padding: 10px 10px;
     color: #ffffff;
+    width: 150px;
   }
 }
 
