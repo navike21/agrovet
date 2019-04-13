@@ -1471,3 +1471,24 @@ footer img {
   -webkit-animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
 }
+
+@media all and (min-width: 1px) {
+  #formularioContacto {
+    width: 80%;
+    background-color: #fff;
+  }
+  #formularioContacto .nf-form-cont {
+    width: 100%;
+  }
+  #formularioContacto input {
+    background-color: #ffffff;
+    padding: 5px 10px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  #formularioContacto .nf-form-cont {
+    margin-right: 50%;
+    width: 50%;
+  }
+}
